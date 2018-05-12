@@ -1,0 +1,9 @@
+*.py[cod]
+
+build
+devel
+
+profile.tmp
+.vscode/
+data/dbw_test.rosbag.bag
+ros/src/twist_controller/.ipynb_checkpoints
