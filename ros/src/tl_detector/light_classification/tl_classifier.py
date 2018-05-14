@@ -2,6 +2,7 @@ import rospy
 from styx_msgs.msg import TrafficLight
 import tensorflow as tf
 import numpy as np
+import datetime
 
 
 class TLClassifier(object):
@@ -45,7 +46,11 @@ class TLClassifier(object):
         """
 
         image_exp = np.expand_dims(image, axis=0)
+        start = datetime.datetime.now()
         (boxes, scores, classes, num_detection) = self.sess.run([self.boxes, self.scores, self.classes, self.num_detections], feed_dict={self.image_tensor: image_exp})
+        end = datetime.datetime.now()
+        c = end - start
+        print("Time for classification: ", c.total_seconds())
 
         boxes = np.squeeze(boxes)
         scores = np.squeeze(scores)
