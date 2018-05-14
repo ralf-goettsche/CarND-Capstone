@@ -82,7 +82,8 @@ class DBWNode(object):
         self.current_twist = value.twist
 
     def loop(self):
-        rate = rospy.Rate(50)  # 50Hz
+        #RG rate = rospy.Rate(50)  # 50Hz
+        rate = rospy.Rate(10)  # 50Hz
         while not rospy.is_shutdown():
             if self.current_velocity and self.current_twist:
                 throttle, brake, steering = self.controller.control(

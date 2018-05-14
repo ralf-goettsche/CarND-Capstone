@@ -51,7 +51,8 @@ class WaypointUpdater(object):
         self.update_loop()
 
     def update_loop(self):
-        rate = rospy.Rate(50)
+        #Rg rate = rospy.Rate(50)
+        rate = rospy.Rate(10)
         while not rospy.is_shutdown():
             if self.current_pose and self.waypoints:
                 closest_wp_idx = self.closest_waypoint_index()

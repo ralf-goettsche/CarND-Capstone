@@ -1,3 +1,25 @@
+# Self-Driving Car Engineer Nanodegree Program
+# *CarND-Capstone: Programming a real Self-Driving Car*
+## Project-Group: The Imaginative
+
+## Project Team Members of "The Imaginative" 
+|  Name                                   | Udacity Account Email Address     |
+|:---------------------------------------:|:---------------------------------:|
+| Ralf Goettsche                          |   ralf.goettsche@gmail.com        |
+| Sergey Moshnikov                        |   s.moshnikov@gmail.com           |
+| Andrew Scott                            |   drewscott65@gmail.com           |
+| Sebastian Rogawski                      |   sebastian.rogawski@gmail.com    |
+| Vladimir Todorov                        |   vladimir.mailhost@gmail.com     |
+
+
+
+
+
+---
+
+# **Original Udacity README**
+
+
 This is the project repo for the final project of the Udacity Self-Driving Car Nanodegree: Programming a Real Self-Driving Car. For more information about the project, see the project introduction [here](https://classroom.udacity.com/nanodegrees/nd013/parts/6047fe34-d93c-4f50-8336-b70ef10cb4b2/modules/e1a23b06-329a-4684-a717-ad476f0d8dff/lessons/462c933d-9f24-42d3-8bdc-a08a5fc866e4/concepts/5ab4b122-83e6-436d-850f-9f4d26627fd9).
 
 Please use **one** of the two installation options, either native **or** docker installation.
