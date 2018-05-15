@@ -31,7 +31,7 @@ class Controller(object):
                  vehicle_mass, wheel_radius, brake_deadband):
         self.brake_controller = BrakeController(decel_limit, vehicle_mass, wheel_radius, brake_deadband)        
         self.yaw_controller = YawController(wheel_base, steer_ratio, MIN_SPEED, max_lat_accel, max_steer_angle)
-        self.vel_filter = LowPassFilter(tau=0.5, ts=0.02)
+        self.vel_filter = LowPassFilter(tau=0.5, ts=0.1)
         self.throttle_pid = PID(kp=0.5, ki=0.01, kd=0.2, mn=-0.8, mx=0.8)
 
         self.last_time = rospy.get_time()
