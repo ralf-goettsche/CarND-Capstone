@@ -84,7 +84,7 @@ class TLDetector(object):
 
     def update_current_pose(self, msg):
         self.pose = msg
-        self.image_cb(None)
+        #self.image_cb(None)
 
     def update_base_waypoints(self, lane):
         self.waypoints = Waypoints(lane.waypoints)
@@ -147,7 +147,7 @@ class TLDetector(object):
             cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
 
             # Get classification
-            print("pic-state: ", self.light_classifier.get_classification(cv_image), "sim-state:", light.state)
+           # print("pic-state: ", self.light_classifier.get_classification(cv_image), "sim-state:", light.state)
             #print("pic-state:off")
         #else:
             #print("sim-state:", light.state)

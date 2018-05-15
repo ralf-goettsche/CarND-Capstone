@@ -51,13 +51,13 @@ class TLClassifier(object):
         (boxes, scores, classes, num_detection) = self.sess.run([self.boxes, self.scores, self.classes, self.num_detections], feed_dict={self.image_tensor: image_exp})
         end = datetime.datetime.now()
         c = end - start
-        print("Time for classification: ", c.total_seconds())
+        #print("Time for classification: ", c.total_seconds())
 
         boxes = np.squeeze(boxes)
         scores = np.squeeze(scores)
         classes = np.squeeze(classes).astype(np.int32)
 
-        rospy.logdebug("scores: %d, classes: %d", scores[0], classes[0])
+        #rospy.logdebug("scores: %d, classes: %d", scores[0], classes[0])
         #print("scores: ",scores[0], ", classes: ", classes[0])
 
         if scores[0] > 0.5:
