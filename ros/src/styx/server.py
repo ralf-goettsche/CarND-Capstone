@@ -21,8 +21,6 @@ dbw_enable = False
 @sio.on('connect')
 def connect(sid, environ):
     print("connect ", sid)
-    #RG:
-    bridge.publish_dbw_status(True)
 
 def send(topic, data):
     #RG s = 1
