@@ -10,8 +10,9 @@ class TLClassifier(object):
         
         if is_sim:
             #PATH_TO_MODEL = 'light_classification/models/rfcn_resnet101_coco_sim/frozen_inference_graph.pb'
-            PATH_TO_MODEL = r'light_classification/models/ssd_inception_v2_coco_sim/frozen_inference_graph.pb'
+            #PATH_TO_MODEL = r'light_classification/models/ssd_inception_v2_coco_sim/frozen_inference_graph.pb'
             #PATH_TO_MODEL = r'light_classification/models/ssd_inception_v2_coco_150_150_sim/frozen_inference_graph.pb'
+            PATH_TO_MODEL = r'light_classification/models/ssd_inception_v2_coco_300_300_sim/frozen_inference_graph.pb'
         else:
             #PATH_TO_MODEL = r'light_classification/models/rfcn_resnet101_coco_byrd/frozen_inference_graph.pb'
             PATH_TO_MODEL = r'light_classification/models/ssd_inception_v2_coco_byrd/frozen_inference_graph.pb'
