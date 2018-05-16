@@ -139,18 +139,14 @@ class TLDetector(object):
 
         """
         #return light.state
-        if(not self.has_image):
+        if((not self.has_image) or (self.camera_image is None)):
             self.prev_light_loc = None
             return False
 
-        if self.camera_image is not None:
-            cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
+        cv_image = self.bridge.imgmsg_to_cv2(self.camera_image, "bgr8")
 
-            # Get classification
-           # print("pic-state: ", self.light_classifier.get_classification(cv_image), "sim-state:", light.state)
-            #print("pic-state:off")
-        #else:
-            #print("sim-state:", light.state)
+        # Get classification
+        # print("pic-state: ", self.light_classifier.get_classification(cv_image), "sim-state:", light.state)
     
         return light.state
         #return self.light_classifier.get_classification(cv_image)
