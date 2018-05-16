@@ -63,9 +63,9 @@ class TLClassifier(object):
 
         """
 
-        #image_size = cv2.resize(image,(150,150))
-        #image_exp = np.expand_dims(image_size, axis=0)
-        image_exp = np.expand_dims(image, axis=0)
+        image_size = cv2.resize(image,(150,150))
+        image_exp = np.expand_dims(image_size, axis=0)
+        #image_exp = np.expand_dims(image, axis=0)
         start = datetime.datetime.now()
         (boxes, scores, classes, num_detection) = self.sess.run([self.boxes, self.scores, self.classes, self.num_detections], feed_dict={self.image_tensor: image_exp})
         end = datetime.datetime.now()

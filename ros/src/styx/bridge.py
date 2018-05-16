@@ -181,7 +181,7 @@ class Bridge(object):
         #if t-self.img_time>0.7:
         imgString = data["image"]
         image = PIL_Image.open(BytesIO(base64.b64decode(imgString)))
-        image = image.resize((100,100))
+        #image = image.resize((100,100))
         image_array = np.asarray(image)
         #self.img_time = t
         image_message = self.bridge.cv2_to_imgmsg(image_array, encoding="rgb8")
