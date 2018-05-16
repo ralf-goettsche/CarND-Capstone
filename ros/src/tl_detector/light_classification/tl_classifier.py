@@ -81,7 +81,7 @@ class TLClassifier(object):
 
         out = self.integrate_scores(scores,classes)
         #rospy.loginfo("scores: %f, classes: %d",out[1] , out[0])
-        cv2.imwrite('/home/student/output/'+str(start)+'_{0}_{1:.2f}'.format(out[0],out[1])+'.png',image_size)
+        #cv2.imwrite('/home/student/output/'+str(start)+'_{0}_{1:.2f}'.format(out[0],out[1])+'.png',image_size)
 
         if out[1] > 0.5:
             if out[0] == 1:
