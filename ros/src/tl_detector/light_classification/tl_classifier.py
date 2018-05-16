@@ -63,8 +63,9 @@ class TLClassifier(object):
 
         """
 
-        image_size = cv2.resize(image,(80,60))
-        image_exp = np.expand_dims(image_size, axis=0)
+        #image_size = cv2.resize(image,(150,150))
+        #image_exp = np.expand_dims(image_size, axis=0)
+        image_exp = np.expand_dims(image, axis=0)
         start = datetime.datetime.now()
         (boxes, scores, classes, num_detection) = self.sess.run([self.boxes, self.scores, self.classes, self.num_detections], feed_dict={self.image_tensor: image_exp})
         end = datetime.datetime.now()
@@ -81,7 +82,7 @@ class TLClassifier(object):
 
         out = self.integrate_scores(scores,classes)
         #rospy.loginfo("scores: %f, classes: %d",out[1] , out[0])
-        #cv2.imwrite('/home/student/output/'+str(start)+'_{0}_{1:.2f}'.format(out[0],out[1])+'.png',image_size)
+        #civ2.imwrite('/home/student/output/'+str(start)+'_{0}_{1:.2f}'.format(out[0],out[1])+'.png',image_size)
 
         if out[1] > 0.5:
             if out[0] == 1:

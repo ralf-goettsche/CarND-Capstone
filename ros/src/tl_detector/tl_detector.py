@@ -49,7 +49,7 @@ class TLDetector(object):
         self.lights = []
 
         sub1 = rospy.Subscriber(
-            '/current_pose', PoseStamped, self.update_current_pose)
+            '/current_pose', PoseStamped, self.update_current_pose,queue_size=1)
         sub2 = rospy.Subscriber('/base_waypoints', Lane,
                                 self.update_base_waypoints)
 
@@ -62,7 +62,7 @@ class TLDetector(object):
         '''
         sub3 = rospy.Subscriber('/vehicle/traffic_lights',
                                 TrafficLightArray, self.update_traffic_lights)
-        sub6 = rospy.Subscriber('/image_color', Image, self.image_cb,queue_size=1,buff_size=62914560)
+        sub6 = rospy.Subscriber('/image_color', Image, self.image_cb,queue_size=1)#,buff_size=62914560)
 
         config_string = rospy.get_param("/traffic_light_config")
         self.config = yaml.load(config_string)
