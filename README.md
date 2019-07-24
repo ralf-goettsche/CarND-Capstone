@@ -11,6 +11,9 @@
 | Sebastian Rogawski                      |   sebastian.rogawski@gmail.com    |
 | Vladimir Todorov                        |   vladimir.mailhost@gmail.com     |
 
+## Abstract
+The student group "The Imaginative" implemented Robot Operating System (ROS) nodes to control a real autonomous vehicle. The ROS nodes represent core functionalities like traffic light detection, control, and waypoint following. They were tested on a simulator, first, before they got integrated into the car system, and got tested.
+
 ## Setup
 
 ### ROS System Diagram
